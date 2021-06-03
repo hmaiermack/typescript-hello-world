@@ -1,6 +1,8 @@
 //similar to interfaces, types start with a capital letter
 type ID = string
 type PopularTag = string;
+//custom types + unions
+type MaybePopularTag = PopularTag | null
 //you can use type aliases inside of interfaces, giving you more info as to what the property is actually for
 interface UserInterface {
     id: ID,
@@ -10,6 +12,10 @@ interface UserInterface {
 
 //can use type aliases similar to property types
 const popularTags: PopularTag[] = ['dragon', 'coffe']
+
+//can use unions when defining types, keeping you from repeating type definitions all over the place
+//eg const dragonsTag: PopularTag | null 
+const dragonsTag: MaybePopularTag = "dragon"
 
 let username: string = 'mack'
 //unions -> | allow you to combine data types
