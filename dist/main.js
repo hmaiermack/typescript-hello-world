@@ -1,3 +1,5 @@
+//can use type aliases similar to property types
+var popularTags = ['dragon', 'coffe'];
 var username = 'mack';
 //unions -> | allow you to combine data types
 //most popular union is checking for null: eg for async fetching
