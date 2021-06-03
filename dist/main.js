@@ -1,22 +1,6 @@
-//if function doesnt return something, its type defaults to void
-//it's still recomended to define it yourself for stricter type checking
-//eg if you try to return something you'll get an error rather than the type automatically changing
-var doSomething = function () {
-    console.log("doSomething");
-};
-//essentially turns off type checking on a variable
-//avoid use any
-//if you need to use any, it means you most likely don't understand the problem correctly
-var foo = "foo";
-var vAny = 10;
-var vUnknown = 10;
-//unknown type isnt directly assignable to another type
-//allows you to continue to get type checking
-//no error with any despite being the wrong type
-var s1 = vAny;
-//throws an error because type unknown cannot be assigned to type string
-var s2 = vUnknown;
-//using as keyword you can use type assertion to convert types from one to another
-var s3 = vUnknown;
-var pageNumber = '1';
-var numericPageNumber = pageNumber;
+//typescript doesn't parse markup
+//when working with DOM elements be as specific as possible when defining your types
+//in the example below, if you do not assert that the element .foo is not an HTMLInputElement then you wouldnt be able to access it's value
+var someEl = document.querySelector(".foo");
+//element is the highest class in the dom hierarchy and very generic
+console.log('someElement', someEl.value);
