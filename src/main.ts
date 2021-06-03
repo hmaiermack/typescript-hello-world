@@ -4,3 +4,23 @@
 const doSomething = (): void => {
     console.log("doSomething")
 }
+
+//essentially turns off type checking on a variable
+//avoid use any
+//if you need to use any, it means you most likely don't understand the problem correctly
+let foo: any = "foo"
+
+let vAny: any = 10
+let vUnknown: unknown = 10
+
+//unknown type isnt directly assignable to another type
+//allows you to continue to get type checking
+
+//no error with any despite being the wrong type
+let s1: string = vAny
+//throws an error because type unknown cannot be assigned to type string
+let s2: string = vUnknown
+
+//similar example to above
+console.log(vAny.foo())
+console.log(vUnknown.foo())
