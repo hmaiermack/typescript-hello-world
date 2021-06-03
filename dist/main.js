@@ -4,3 +4,12 @@
 var someEl = document.querySelector(".foo");
 //element is the highest class in the dom hierarchy and very generic
 console.log('someElement', someEl.value);
+//similarly to element, event is a "super generic" type and will be automatically assigned
+someEl.addEventListener('blur', function (event) {
+    //create a new variable with a specific type assertion so that you can correctly access its value
+    //if you tried to access the value without defining target as an HTMLInputElement via event.target.value
+    //typescript will throw an error
+    var target = event.target;
+    console.log("event", target.value);
+});
+//when working with the DOM in typescript you have to use as to assign the correct types to whatever it is you're working with
