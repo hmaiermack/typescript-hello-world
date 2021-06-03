@@ -1,4 +1,4 @@
-const getFullName = (name: string, lastName: string) => {
+const getFullName = (name: string, lastName: string): string => {
     return name + " " + lastName
 }
 
