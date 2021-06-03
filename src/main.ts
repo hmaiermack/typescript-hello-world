@@ -2,6 +2,7 @@
 //by default all properties in interface are mandatory
 //to make a property optional add a ? after the property name
 //interfaces provide autocomplete 
+//you usually want to specify that an interface is an interface in the name eg IUser or UserInterface
 interface User {
     name: string,
     age?: number,
