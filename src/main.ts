@@ -1,27 +1,9 @@
-//interface label should start with a capital letter
-//by default all properties in interface are mandatory
-//to make a property optional add a ? after the property name
-//interfaces provide autocomplete 
-//you usually want to specify that an interface is an interface in the name eg IUser or UserInterface
-interface User {
-    name: string,
-    age?: number,
-    getMessage(): string
-}
 
-const user: User = {
-    name: 'Mack',
-    age: 26,
-    getMessage() {
-        return 'Hello' + name
-    }
-}
+let username: string = 'mack'
+//unions -> | allow you to combine data types
+//most popular union is checking for null: eg for async fetching
+let pageNumber: string | number = '1';
 
-const user2: User = {
-    name: "Jack",
-    getMessage() {
-        return 'Hello' + name
-    }
-}
-
-console.log(user.getMessage())
+//when using a union whatever you set your variable to is the default value, if there is no default value it will default to undefined
+//let error: string | null would be type undefined, whereas the below example is type null
+let errorMessage: string | null = null
