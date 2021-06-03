@@ -21,6 +21,8 @@ let s1: string = vAny
 //throws an error because type unknown cannot be assigned to type string
 let s2: string = vUnknown
 
-//similar example to above
-console.log(vAny.foo())
-console.log(vUnknown.foo())
+//using as keyword you can use type assertion to convert types from one to another
+let s3: string = vUnknown as string
+
+let pageNumber: string = '1'
+let numericPageNumber: number = pageNumber as unknown as number

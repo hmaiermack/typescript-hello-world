@@ -16,6 +16,7 @@ var vUnknown = 10;
 var s1 = vAny;
 //throws an error because type unknown cannot be assigned to type string
 var s2 = vUnknown;
-//similar example to above
-console.log(vAny.foo());
-console.log(vUnknown.foo());
+//using as keyword you can use type assertion to convert types from one to another
+var s3 = vUnknown;
+var pageNumber = '1';
+var numericPageNumber = pageNumber;
